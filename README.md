@@ -44,7 +44,7 @@ https://sourceforge.net/projects/mpv-player-windows/
 uvicorn main:app --port 8080
 ```
 
-8. Apis documentation at 
+8. APIs documentation at 
 ``` shell
 https://example.com
 ```
