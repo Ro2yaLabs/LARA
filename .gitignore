@@ -8,3 +8,4 @@ casy/
 courses/
 __pycache__/
 books/
+row_data/*
