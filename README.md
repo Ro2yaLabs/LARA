@@ -22,23 +22,33 @@ conda activate lara
 pip install -r requirements.txt
 ```
 
-4. Run the following docker command
+4. Rename .env.example to .env and add the secret keys of 
+    - openai
+    - elevenlabs
+
+
+5. Run the following docker command
 
 ```shell
 #CHANGE M:\Projects\ro2ya\LARA\store => to the location in your hard disk
 docker run -p 8000:8000 -e CHROMA_SERVER_AUTH_CREDENTIALS_PROVIDER="chromadb.auth.token.TokenConfigServerAuthCredentialsProvider" -e CHROMA_SERVER_AUTH_PROVIDER="chromadb.auth.token.TokenAuthServerProvider" -e CHROMA_SERVER_AUTH_CREDENTIALS="zed@12345678" -e CHROMA_SERVER_AUTH_TOKEN_TRANSPORT_HEADER="X_CHROMA_TOKEN" -v M:\Projects\ro2ya\LARA\store:/chroma/chroma -d chromadb/chroma
 ```
 
-5. Download mpv for streaming and put it in program files
+6. Download mpv for streaming and put it in program files
 ```shell
 https://sourceforge.net/projects/mpv-player-windows/
 ```
 
-5. Start the app
+7. Start the app
 ```shell
 uvicorn main:app --port 8080
 ```
 
-6. test the app from test_main.pynb script
+8. Apis documentation at 
+``` shell
+https://example.com
+```
+
+9. You can test the app from test_main.pynb script
 
 
