@@ -23,8 +23,9 @@ pip install -r requirements.txt
 ```
 
 4. Run the following docker command
-BUT CHANGE M:\Projects\ro2ya\LARA\store => to the location in your hard
+
 ```shell
+#BUT CHANGE M:\Projects\ro2ya\LARA\store => to the location in your hard disk
 docker run -p 8000:8000 -e CHROMA_SERVER_AUTH_CREDENTIALS_PROVIDER="chromadb.auth.token.TokenConfigServerAuthCredentialsProvider" -e CHROMA_SERVER_AUTH_PROVIDER="chromadb.auth.token.TokenAuthServerProvider" -e CHROMA_SERVER_AUTH_CREDENTIALS="zed@12345678" -e CHROMA_SERVER_AUTH_TOKEN_TRANSPORT_HEADER="X_CHROMA_TOKEN" -v M:\Projects\ro2ya\LARA\store:/chroma/chroma -d chromadb/chroma
 ```
 
