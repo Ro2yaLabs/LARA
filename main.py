@@ -14,6 +14,7 @@ import yaml
 import hashlib
 from typing import List
 import base64
+import os
 
 casy = Casy()
 args = Args()
@@ -63,6 +64,11 @@ async def create_upload_file(file: UploadFile = File(...)):
 
     :param file: the uploaded file (.docs, .pdf)
     """
+
+    books_folder = "books"
+    if not os.path.exists(books_folder):
+        os.makedirs(books_folder)
+
     file_location = f"books/{file.filename}"
     with open(file_location, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
