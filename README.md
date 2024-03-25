@@ -46,7 +46,7 @@ uvicorn main:app --port 8080
 
 8. APIs documentation at 
 ``` shell
-https://example.com
+https://www.postman.com/satellite-geoscientist-95548148/workspace/lara/collection/33188959-17e24558-26fe-4408-9681-29fa9b17ceb7?action=share&creator=33188959
 ```
 
 9. You can test the app from test_main.pynb script
