@@ -13,7 +13,7 @@ import os
 load_dotenv()
 
 
-class Casy:
+class Lara:
 
     def __init__(self):
         self.g_vars = {}
@@ -70,8 +70,6 @@ class Casy:
             messages=messages,
             stream=True,
         )
-
-        print(prompt.template)
         
         res = ""
 
