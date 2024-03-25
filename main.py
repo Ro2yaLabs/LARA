@@ -102,7 +102,7 @@ async def message(websocket: WebSocket):
         while True:
             data = await websocket.receive_text()
             message_content = data.split(":", 1)[1][:-1]
-            async for audio_data in casy.stream_text_audio_ws(message_content, websocket):
+            async for audio_data in casy.stream_text_audio_ws(message_content):
                 await websocket.send_bytes(audio_data)
 
             await websocket.send_text("".join(casy.memo))

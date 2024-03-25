@@ -51,9 +51,9 @@ class Casy:
 
     async def stream_text_audio_ws(self, question):
         prompt = self.get_the_prompt(question)
-        llm = self.openai_llm_with_memmory(prompt, question)
+
         audio_stream = elevenlabs.generate(
-            text=llm, voice="Alice", model="eleven_multilingual_v2", stream=True)
+            text=self.openai_llm_with_memmory(prompt, question), voice="Alice", model="eleven_multilingual_v2", stream=True)
         for chunk in audio_stream:
             if chunk:
                 yield chunk
@@ -71,6 +71,8 @@ class Casy:
             stream=True,
         )
 
+        print(prompt.template)
+        
         res = ""
 
         for chunk in response:
