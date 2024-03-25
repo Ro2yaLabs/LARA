@@ -4,7 +4,7 @@
 
 1. Clone the repo
 ```shell
-git clone https://github.com/Mahmoud-ghareeb/LARA.git
+git clone https://github.com/Ro2yaLabs/LARA.git
 ``` 
 
 1. Create Python Environment
