@@ -86,13 +86,13 @@ async def create_upload_file(file: UploadFile = File(...)):
 @app.post("/text")
 async def message(message: Message):
 
-    return StreamingResponse(lara.stream_text(message.text), media_type="text/plain")
+    return StreamingResponse(lara.stream_text(message.message), media_type="text/plain")
 
 
 @app.post("/audio")
 async def message(message: Message):
 
-    return StreamingResponse(lara.stream_audio(message.text), media_type="text/mpeg")
+    return StreamingResponse(lara.stream_audio(message.message), media_type="text/mpeg")
 
 
 @app.websocket("/socket_audio")
