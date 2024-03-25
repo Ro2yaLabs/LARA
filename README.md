@@ -9,7 +9,7 @@ git clone https://github.com/Mahmoud-ghareeb/LARA.git
 
 1. Create Python Environment
 ```shell
-conda create lara python==3.12.2
+conda create --name lara python==3.12.2
 ```
 
 2. Activate the environment
