@@ -92,5 +92,5 @@ def load_and_embedd(file_path, embeddings, name, is_json=False):
             client=client,
             collection_name=name
         )
-
+ 
     return vector_db
