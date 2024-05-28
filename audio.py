@@ -22,7 +22,7 @@ def get_audio_stream(llm):
 
 
 def stream(audio_stream: Iterator[bytes]) -> bytes:
-    mpv_command = ["C:\\Program Files\\mpv\\mpv.exe",
+    mpv_command = ["mpv",
                    "--no-cache", "--no-terminal", "--", "fd://0"]
     mpv_process = subprocess.Popen(
         mpv_command,
@@ -46,7 +46,7 @@ def stream(audio_stream: Iterator[bytes]) -> bytes:
     return audio
 
 async def astream(audio_stream: Iterator[bytes]) -> bytes:
-    mpv_command = ["C:\\Program Files\\mpv\\mpv.exe",
+    mpv_command = ["mpv",
                    "--no-cache", "--no-terminal", "--", "fd://0"]
     mpv_process = subprocess.Popen(
         mpv_command,
@@ -71,7 +71,7 @@ async def astream(audio_stream: Iterator[bytes]) -> bytes:
 
 
 async def astream_with_text(audio_stream: Iterator[bytes]) -> bytes:
-    mpv_command = ["C:\\Program Files\\mpv\\mpv.exe",
+    mpv_command = ["mpv",
                    "--no-cache", "--no-terminal", "--", "fd://0"]
     mpv_process = subprocess.Popen(
         mpv_command,
